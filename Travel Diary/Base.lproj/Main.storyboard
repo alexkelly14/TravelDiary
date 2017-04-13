@@ -21,21 +21,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h7l-IO-HjD">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h7l-IO-HjD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="609"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxW-if-XBb">
-                                <rect key="frame" x="0.0" y="617" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxW-if-XBb">
+                                <rect key="frame" x="0.0" y="610" width="375" height="47"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                 <state key="normal" title="Add to Travel Diary">
                                     <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="AddtoTravelDiaryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="23h-vj-TOu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h7l-IO-HjD" secondAttribute="trailing" id="6lF-Tb-7r1"/>
+                            <constraint firstItem="h7l-IO-HjD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="80B-BI-axZ"/>
+                            <constraint firstItem="dxW-if-XBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DY9-Nh-zDb"/>
+                            <constraint firstItem="dxW-if-XBb" firstAttribute="top" secondItem="h7l-IO-HjD" secondAttribute="bottom" constant="8" id="J8H-FT-k8D"/>
+                            <constraint firstAttribute="trailing" secondItem="dxW-if-XBb" secondAttribute="trailing" id="MEf-KQ-cOT"/>
+                            <constraint firstItem="h7l-IO-HjD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gd8-yC-RVb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dxW-if-XBb" secondAttribute="bottom" constant="10" id="td4-eS-Mqc"/>
+                            <constraint firstItem="dxW-if-XBb" firstAttribute="top" secondItem="h7l-IO-HjD" secondAttribute="bottom" constant="10" id="w4T-Iw-fea"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="h7l-IO-HjD" id="jja-wT-l90"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
