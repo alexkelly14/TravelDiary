@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="126.38680659670166"/>
         </scene>
-        <!--View Controller-->
+        <!--Info-->
         <scene sceneID="iVd-Yj-nb9">
             <objects>
-                <viewController id="XUj-rs-xku" sceneMemberID="viewController">
+                <viewController id="XUj-rs-xku" customClass="Info" customModule="Travel_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yFb-wt-PUn"/>
                         <viewControllerLayoutGuide type="bottom" id="jIq-yu-5vw"/>

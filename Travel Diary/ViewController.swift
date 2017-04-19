@@ -24,6 +24,11 @@ class ViewController: UIViewController {
 
     @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
     }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let dvc = segue.destination as! Info
+
+    
 
 }
 
+}

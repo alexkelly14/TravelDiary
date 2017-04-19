@@ -15,6 +15,7 @@
 		FC8BF40E1EA643A7004EE118 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8BF40D1EA643A7004EE118 /* Place.swift */; };
 		FC8BF41D1EA67A4A004EE118 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8BF41C1EA67A4A004EE118 /* RealmSwift.framework */; };
 		FC8BF41E1EA67A4A004EE118 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC8BF41C1EA67A4A004EE118 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC8BF4221EA7BFA1004EE118 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8BF4211EA7BFA1004EE118 /* Info.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 		FC8BF40D1EA643A7004EE118 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		FC8BF41C1EA67A4A004EE118 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		FC8BF4201EA67A55004EE118 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		FC8BF4211EA7BFA1004EE118 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				FC46656F1E9BEC5B00E9F343 /* AppDelegate.swift */,
+				FC8BF4211EA7BFA1004EE118 /* Info.swift */,
 				FC4665711E9BEC5B00E9F343 /* ViewController.swift */,
 				FC4665731E9BEC5B00E9F343 /* Main.storyboard */,
 				FC8BF40D1EA643A7004EE118 /* Place.swift */,
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8BF40E1EA643A7004EE118 /* Place.swift in Sources */,
+				FC8BF4221EA7BFA1004EE118 /* Info.swift in Sources */,
 				FC4665721E9BEC5B00E9F343 /* ViewController.swift in Sources */,
 				FC4665701E9BEC5B00E9F343 /* AppDelegate.swift in Sources */,
 			);
