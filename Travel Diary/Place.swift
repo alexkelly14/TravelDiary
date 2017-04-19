@@ -7,18 +7,18 @@
 //
 
 import UIKit
-
+import RealmSwift
 class Place: UIViewController {
     dynamic var name = String()
     dynamic var location = String()
-    dynamic var summary = String()
+    dynamic var date = Int()
     dynamic var image = Data()
 
-    convenience init(name:String, location: String, summary: String, image: Data){
+    convenience init(name:String, location: String, date: Int, image: Data){
         self.init()
         self.name = name
         self.location = location
-        self.summary = summary
+        self.date = date
         self.image = image
     }
     
