@@ -91,23 +91,35 @@
                                 <rect key="frame" x="113" y="509" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="onTappedCameraButton:" destination="XUj-rs-xku" eventType="touchUpInside" id="Iid-29-bj1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQ8-U8-wJB">
                                 <rect key="frame" x="238" y="508" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Library"/>
+                                <connections>
+                                    <action selector="onTappedLibraryButton:" destination="XUj-rs-xku" eventType="touchUpInside" id="hZc-fd-aMp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKa-32-t0k">
                                 <rect key="frame" x="149" y="547" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="save"/>
                                 <connections>
+                                    <action selector="onTappedSaveButton:" destination="XUj-rs-xku" eventType="touchUpInside" id="1z1-B9-8z7"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="mD0-5x-h9m"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="m4Z-xN-3l3" id="wEr-Br-y0P"/>
+                        <outlet property="imageView" destination="yum-wP-6Oc" id="av1-vF-zTP"/>
+                        <outlet property="locationTextField" destination="WxF-wB-b6m" id="3Ht-DX-1I9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFL-aQ-eD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
