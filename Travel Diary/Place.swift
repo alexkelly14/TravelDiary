@@ -13,10 +13,10 @@ class Place: UIViewController {
     
     var name = String()
     var location = String()
-    var date = Int()
+    var date = String()
     var image = Data()
 
-    convenience init(name:String, location: String, date: Int, image: Data){
+    convenience init(name:String, location: String, date: String, image: Data){
         self.init()
         self.name = name
         self.location = location
