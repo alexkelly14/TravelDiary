@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC04CD9A1EAA69C0007A04C4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04CD991EAA69C0007A04C4 /* DetailViewController.swift */; };
 		FC4665701E9BEC5B00E9F343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46656F1E9BEC5B00E9F343 /* AppDelegate.swift */; };
 		FC4665721E9BEC5B00E9F343 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4665711E9BEC5B00E9F343 /* ViewController.swift */; };
 		FC4665751E9BEC5B00E9F343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4665731E9BEC5B00E9F343 /* Main.storyboard */; };
 		FC4665771E9BEC5B00E9F343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4665761E9BEC5B00E9F343 /* Assets.xcassets */; };
 		FC46657A1E9BEC5B00E9F343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4665781E9BEC5B00E9F343 /* LaunchScreen.storyboard */; };
 		FC8BF40E1EA643A7004EE118 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8BF40D1EA643A7004EE118 /* Place.swift */; };
-		FC8BF41D1EA67A4A004EE118 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8BF41C1EA67A4A004EE118 /* RealmSwift.framework */; };
-		FC8BF41E1EA67A4A004EE118 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC8BF41C1EA67A4A004EE118 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FC8BF4221EA7BFA1004EE118 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8BF4211EA7BFA1004EE118 /* Info.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FC8BF41E1EA67A4A004EE118 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC04CD991EAA69C0007A04C4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FC46656C1E9BEC5B00E9F343 /* Travel Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC46656F1E9BEC5B00E9F343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4665711E9BEC5B00E9F343 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,9 +39,6 @@
 		FC4665791E9BEC5B00E9F343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC46657B1E9BEC5B00E9F343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC8BF40D1EA643A7004EE118 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
-		FC8BF41C1EA67A4A004EE118 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		FC8BF4201EA67A55004EE118 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		FC8BF4211EA7BFA1004EE118 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC8BF41D1EA67A4A004EE118 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +55,6 @@
 		FC4665631E9BEC5B00E9F343 = {
 			isa = PBXGroup;
 			children = (
-				FC8BF4201EA67A55004EE118 /* Realm.framework */,
-				FC8BF41C1EA67A4A004EE118 /* RealmSwift.framework */,
 				FC46656E1E9BEC5B00E9F343 /* Travel Diary */,
 				FC46656D1E9BEC5B00E9F343 /* Products */,
 			);
@@ -80,9 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				FC46656F1E9BEC5B00E9F343 /* AppDelegate.swift */,
-				FC8BF4211EA7BFA1004EE118 /* Info.swift */,
-				FC4665711E9BEC5B00E9F343 /* ViewController.swift */,
 				FC4665731E9BEC5B00E9F343 /* Main.storyboard */,
+				FC4665711E9BEC5B00E9F343 /* ViewController.swift */,
+				FC04CD991EAA69C0007A04C4 /* DetailViewController.swift */,
 				FC8BF40D1EA643A7004EE118 /* Place.swift */,
 				FC4665761E9BEC5B00E9F343 /* Assets.xcassets */,
 				FC4665781E9BEC5B00E9F343 /* LaunchScreen.storyboard */,
@@ -165,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8BF40E1EA643A7004EE118 /* Place.swift in Sources */,
-				FC8BF4221EA7BFA1004EE118 /* Info.swift in Sources */,
+				FC04CD9A1EAA69C0007A04C4 /* DetailViewController.swift in Sources */,
 				FC4665721E9BEC5B00E9F343 /* ViewController.swift in Sources */,
 				FC4665701E9BEC5B00E9F343 /* AppDelegate.swift in Sources */,
 			);

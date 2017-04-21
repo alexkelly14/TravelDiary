@@ -7,12 +7,14 @@
 //
 
 import UIKit
-import RealmSwift
+//import RealmSwift
+
 class Place: UIViewController {
-    dynamic var name = String()
-    dynamic var location = String()
-    dynamic var date = Int()
-    dynamic var image = Data()
+    
+    var name = String()
+    var location = String()
+    var date = Int()
+    var image = Data()
 
     convenience init(name:String, location: String, date: Int, image: Data){
         self.init()
@@ -21,11 +23,4 @@ class Place: UIViewController {
         self.date = date
         self.image = image
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-
-    }
-
 }
