@@ -15,14 +15,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
    
     @IBOutlet weak var mapView: MKMapView!
     
-    let locationManger = CLLocationManager()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.locationManger.delegate = self
-        self.locationManger.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManger.requestWhenInUseAuthorization()
-        self.locationManger.startUpdatingLocation()
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
     }
     
@@ -32,13 +32,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
         
         self.mapView.setRegion(region, animated: true)
-        self.locationManger.stopUpdatingLocation()
+        self.locationManager.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("errors" + error.localizedDescription)
     }
-    
+
     @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
     }
     
