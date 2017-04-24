@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
         
         @IBOutlet weak var imageView: UIImageView!
