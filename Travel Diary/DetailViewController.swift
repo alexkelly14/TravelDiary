@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
         
         @IBOutlet weak var imageView: UIImageView!
@@ -42,6 +44,9 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         @IBAction func onTappedSaveButton(_ sender: UIButton) {
+           CLLocationManager()
+        
         }
+    
         
 }
