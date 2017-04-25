@@ -44,10 +44,10 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         @IBAction func onTappedSaveButton(_ sender: UIButton) {
-            if locationTextField = ""
-            return
-            findLocation()
-            displayPin() 
+//            if locationTextField = ""
+//            return
+//            findLocation()
+//            displayPin() 
             
         }
     
