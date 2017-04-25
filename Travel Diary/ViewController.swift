@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-import CoreLocation
+import CoreLocation 
 //import RealmSwift
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
@@ -16,7 +16,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var mapView: MKMapView!
     
 //let locationManager = CLLocationManager()
-    
+   
     override func viewDidLoad() {
 //        super.viewDidLoad()
 //        self.locationManager.delegate = self

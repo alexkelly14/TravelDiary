@@ -20,6 +20,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         override func viewDidLoad() {
             super.viewDidLoad()
             imagePicker.delegate = self
+
             
         }
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -44,10 +45,6 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         @IBAction func onTappedSaveButton(_ sender: UIButton) {
-//            if locationTextField = ""
-//            return
-//            findLocation()
-//            displayPin() 
             
         }
     
