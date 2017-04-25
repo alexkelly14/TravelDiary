@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
-class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate{
         
         @IBOutlet weak var imageView: UIImageView!
         @IBOutlet weak var dateTextField: UITextField!
@@ -20,8 +20,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         override func viewDidLoad() {
             super.viewDidLoad()
             imagePicker.delegate = self
-            
         }
+    
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
             imagePicker.dismiss(animated: true)
             {
@@ -44,11 +44,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         @IBAction func onTappedSaveButton(_ sender: UIButton) {
-//            if locationTextField = ""
-//            return
-//            findLocation()
-//            displayPin() 
-            
+           findLocation()
         }
     
         
