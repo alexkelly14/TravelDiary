@@ -44,8 +44,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         @IBAction func onTappedSaveButton(_ sender: UIButton) {
-           findLocation()
+           //findLocation()
         }
     
-        
 }
