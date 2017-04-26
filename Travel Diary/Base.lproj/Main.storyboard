@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ehQ-jh-56C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ehQ-jh-56C">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,6 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VBd-wg-yyc"/>
                     <connections>
+                        <outlet property="gestureRecongnizer" destination="I84-em-B4a" id="dhI-cS-mTj"/>
                         <outlet property="mapView" destination="h7l-IO-HjD" id="jja-wT-l90"/>
                     </connections>
                 </viewController>

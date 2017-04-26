@@ -47,5 +47,4 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
  //          findLocation()
         }
     
-        
 }

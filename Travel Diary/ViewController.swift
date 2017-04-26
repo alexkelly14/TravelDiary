@@ -15,6 +15,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
    
     @IBOutlet weak var mapView: MKMapView!
 
+    @IBOutlet var gestureRecongnizer: UILongPressGestureRecognizer!
+    
+//let locationManager = CLLocationManager()
+   
     override func viewDidLoad() {
  }
     
@@ -68,9 +72,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! DetailViewController
-        
-        
-        
     }
+    
+    let gestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTap:")
+    gestureRecognizer.delegate = self
+    mapView.addGestureRecognizer(gestureRecognizer)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
     
 }
