@@ -15,10 +15,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
    
     @IBOutlet weak var mapView: MKMapView!
 
-    @IBOutlet var gestureRecongnizer: UILongPressGestureRecognizer!
-    
-//let locationManager = CLLocationManager()
-   
     override func viewDidLoad() {
  }
     

@@ -10,15 +10,14 @@ import UIKit
 //import RealmSwift
 
 class Place: UIViewController {
-    
-    var name = String()
+
     var location = String()
     var date = String()
     var image = Data()
 
-    convenience init(name:String, location: String, date: String, image: Data){
+    convenience init(location: String, date: String, image: Data){
         self.init()
-        self.name = name
+
         self.location = location
         self.date = date
         self.image = image
