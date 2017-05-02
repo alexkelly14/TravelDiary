@@ -44,8 +44,16 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         @IBAction func onTappedSaveButton(_ sender: UIButton) {
-            displayPin()
-            findLocation()
-        }
+            guard let controllers = navigationController?.viewControllers else { return }
+            let count = controllers.count
+            if count > 2 {
+                if let firstVC = controllers[count - 2] as? ViewController {
+                    firstVC. = MKPlacemark
+                    firstVC.someOtherProperty = moreData
+                    
+                    navigationController?.popToViewController(firstVC, animated: true)
+                }
+            }
+    }
     
 }
