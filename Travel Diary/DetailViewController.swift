@@ -44,7 +44,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         @IBAction func onTappedSaveButton(_ sender: UIButton) {
-        navigationController?.popToViewController(firstvc, animated: true)
+        navigationController?.popToViewController(ViewController, animated: true)
                 }
             }
     
