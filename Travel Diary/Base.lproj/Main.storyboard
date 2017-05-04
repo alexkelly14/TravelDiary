@@ -132,7 +132,8 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onTappedSaveButton:" destination="XUj-rs-xku" eventType="touchUpInside" id="1z1-B9-8z7"/>
+                                    <action selector="goBackToFirstViewController:" destination="XUj-rs-xku" eventType="touchUpInside" id="uDn-a8-nyG"/>
+                                    <action selector="onTappedSaveButton:" destination="XUj-rs-xku" eventType="touchUpInside" id="Q61-qE-nkE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -168,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFL-aQ-eD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3176.8000000000002" y="125.4872563718141"/>
+            <point key="canvasLocation" x="3082" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oPZ-7U-roS">
