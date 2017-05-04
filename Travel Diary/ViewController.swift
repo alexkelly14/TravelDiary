@@ -15,12 +15,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
    
     @IBOutlet weak var mapView: MKMapView!
     @IBAction override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-        navigationController?.popToViewController(, animated: true)
+//        navigationController?.popToViewController(, animated: true)
         
     }
     
 
     override func viewDidLoad() {
+           findLocation(location: "Barrington High School")
  }
     
     func findLocation(location: String) {
