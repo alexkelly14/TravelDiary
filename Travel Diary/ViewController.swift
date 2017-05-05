@@ -14,15 +14,18 @@ import CoreLocation
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
    
     @IBOutlet weak var mapView: MKMapView!
-    @IBAction override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-        navigationController?.popToViewController(, animated: true)
+    var data = ""
+    
+    
+    override func viewDidLoad() {
+        
+    }
+    
+    @IBAction func unwindToIntialViewController(segue: UIStoryboardSegue){
         
     }
     
 
-    override func viewDidLoad() {
- }
-    
     func findLocation(location: String) {
         let localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = location
@@ -69,10 +72,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
 
     @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        let dvc = segue.destination as! DetailViewController
+        dvc.data = "This Came From Third VC"
+        func viewWillLoad() {
+            viewWillAppear(true)
+            print(data)
+        }
+        
     }
 
     

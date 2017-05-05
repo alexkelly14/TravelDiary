@@ -14,6 +14,7 @@ class Place: UIViewController {
     var location = String()
     var date = String()
     var image = Data()
+    var data = ""
 
     convenience init(location: String, date: String, image: Data){
         self.init()
@@ -22,4 +23,9 @@ class Place: UIViewController {
         self.date = date
         self.image = image
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
+    
+    
 }

@@ -14,13 +14,18 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         @IBOutlet weak var imageView: UIImageView!
         @IBOutlet weak var dateTextField: UITextField!
         @IBOutlet weak var locationTextField: UITextField!
+    
         
         let imagePicker = UIImagePickerController()
+        var data = ""
         
         override func viewDidLoad() {
             super.viewDidLoad()
             imagePicker.delegate = self
-        }
+            
+            
+    }
+    
     
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
             imagePicker.dismiss(animated: true)
@@ -42,23 +47,23 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
             present(imagePicker, animated: true, completion: nil)
         }
-        
-        @IBAction func onTappedSaveButton(_ sender: UIButton) {
-            
-            
-    }
     
-    
-            
-    @IBAction func goBackToFirstViewController(_ sender: UIButton) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = segue.destination as! Place
+        dvc.data = "This Came From Third VC"
+        func viewWillLoad() {
+            viewWillAppear(true)
+            print(data)
         
     }
+    }
+}
+
     
     
     
-    
-    
-            }
+
     
 
 
+}

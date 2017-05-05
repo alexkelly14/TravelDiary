@@ -132,8 +132,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="goBackToFirstViewController:" destination="XUj-rs-xku" eventType="touchUpInside" id="uDn-a8-nyG"/>
-                                    <action selector="onTappedSaveButton:" destination="XUj-rs-xku" eventType="touchUpInside" id="Q61-qE-nkE"/>
+                                    <segue destination="brg-Pz-9hV" kind="unwind" unwindAction="unwindToIntialViewControllerWithSegue:" id="SkC-CM-LfZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -168,6 +167,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFL-aQ-eD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="brg-Pz-9hV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3082" y="126"/>
         </scene>
