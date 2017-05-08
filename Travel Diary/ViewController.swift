@@ -20,6 +20,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func viewDidLoad() {
         
     }
+    func viewWillAppear() {
+        print(data)
+    }
     
     @IBAction func unwindToIntialViewController(segue: UIStoryboardSegue){
         
@@ -77,11 +80,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! DetailViewController
-        dvc.data = "This Came From Third VC"
-        func viewWillLoad() {
-            viewWillAppear(true)
-            print(data)
-        }
+        dvc.data = "This came from the first VC"
         
     }
 

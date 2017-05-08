@@ -24,7 +24,9 @@ class Place: UIViewController {
         self.image = image
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        let dvc = segue.destination as! ViewController
+        dvc.data = "This came from the second VC"
+        
     }
     
     

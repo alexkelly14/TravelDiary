@@ -22,8 +22,10 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         override func viewDidLoad() {
             super.viewDidLoad()
             imagePicker.delegate = self
-            
-            
+    }
+    
+    func viewWillLoad() {
+        print(data)
     }
     
     
@@ -49,21 +51,9 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dvc = segue.destination as! Place
-        dvc.data = "This Came From Third VC"
-        func viewWillLoad() {
-            viewWillAppear(true)
-            print(data)
-        
+        let dvc = segue.destination as! ViewController
+        dvc.data = "This came from the second VC"
+      
     }
-    }
-}
-
-    
-    
-    
-
-    
 
 
-}
