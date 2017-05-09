@@ -81,7 +81,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! DetailViewController
         dvc.location = "This came from the first VC"
-        
     }
 
     

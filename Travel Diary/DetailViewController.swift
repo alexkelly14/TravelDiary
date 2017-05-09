@@ -15,9 +15,9 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         @IBOutlet weak var dateTextField: UITextField!
         @IBOutlet weak var locationTextField: UITextField!
     
-        
         let imagePicker = UIImagePickerController()
         var location = ""
+    
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -53,8 +53,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! ViewController
         dvc.location = "This came from the second VC"
-        locationTextField.text = location.Place()
-      
+        locationTextField.text = location
+
     }
 
 
