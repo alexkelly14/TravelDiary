@@ -17,7 +17,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
         
         let imagePicker = UIImagePickerController()
-        var data = ""
+        var location = ""
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -25,7 +25,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func viewWillLoad() {
-        print(data)
+        print(location)
     }
     
     
@@ -52,8 +52,10 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! ViewController
-        dvc.data = "This came from the second VC"
+        dvc.location = "This came from the second VC"
+        locationTextField.text = location.Place()
       
     }
 
 
+}
