@@ -17,9 +17,9 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
         let imagePicker = UIImagePickerController()
         var location = ""
+        var place = Place()
     
-        
-        override func viewDidLoad() {
+    override func viewDidLoad() {
             super.viewDidLoad()
             imagePicker.delegate = self
     }
@@ -53,8 +53,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! ViewController
         dvc.location = "This came from the second VC"
-        locationTextField.text = location
-
+        place.location = locationTextField.text!
+        dvc.place = self.place
     }
 
 

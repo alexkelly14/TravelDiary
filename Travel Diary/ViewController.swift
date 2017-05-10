@@ -15,10 +15,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
    
     @IBOutlet weak var mapView: MKMapView!
     var location = ""
+    var objects = [Any]()
+    var place = Place()
     
     
     override func viewDidLoad() {
-        
+
     }
     func viewWillAppear() {
         print(location)
