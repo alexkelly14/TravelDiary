@@ -14,14 +14,14 @@ import CoreLocation
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
    
     @IBOutlet weak var mapView: MKMapView!
-    var data = ""
+    var location = ""
     
     
     override func viewDidLoad() {
         
     }
     func viewWillAppear() {
-        print(data)
+        print(location)
     }
     
     @IBAction func unwindToIntialViewController(segue: UIStoryboardSegue){
@@ -80,8 +80,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! DetailViewController
-        dvc.data = "This came from the first VC"
-        
+        dvc.location = "This came from the first VC"
     }
 
     

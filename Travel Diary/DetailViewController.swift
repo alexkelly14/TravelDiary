@@ -15,9 +15,9 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         @IBOutlet weak var dateTextField: UITextField!
         @IBOutlet weak var locationTextField: UITextField!
     
-        
         let imagePicker = UIImagePickerController()
-        var data = ""
+        var location = ""
+    
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -25,7 +25,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func viewWillLoad() {
-        print(data)
+        print(location)
     }
     
     
