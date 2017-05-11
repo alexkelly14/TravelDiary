@@ -18,20 +18,15 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var objects = [Any]()
     var place = Place()
     
-    
     override func viewDidLoad() {
-
+        findLocation(location: String())
     }
     func viewWillAppear() {
         print(location)
     }
     
-    @IBAction func unwindToIntialViewController(segue: UIStoryboardSegue){
-        
-    }
-    
-
     func findLocation(location: String) {
+        
         let localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = location
         let localSearch = MKLocalSearch(request: localSearchRequest)
@@ -61,8 +56,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 self.displayPin(placemark: locations.first!.placemark)
             }
         }
-    }
     
+}
+
     func displayPin(placemark : MKPlacemark) {
         self.navigationItem.title = placemark.name
         let center = placemark.location!.coordinate
@@ -74,15 +70,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.addAnnotation(pin)
         mapView.setRegion(region, animated: true)
     }
-    
 
-    @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
+    @IBAction func unwindToIntialViewController(segue: UIStoryboardSegue){
         
     }
     
+    
+
+    @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
+
+}
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! DetailViewController
         dvc.location = "This came from the first VC"
+        
+        
     }
 
     

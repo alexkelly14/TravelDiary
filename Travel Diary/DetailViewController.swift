@@ -18,10 +18,12 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         let imagePicker = UIImagePickerController()
         var location = ""
         var place = Place()
+        var recievedString = ""
     
     override func viewDidLoad() {
             super.viewDidLoad()
             imagePicker.delegate = self
+        
     }
     
     func viewWillLoad() {
@@ -55,7 +57,6 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         dvc.location = "This came from the second VC"
         place.location = locationTextField.text!
         dvc.place = self.place
+        
     }
-
-
 }
