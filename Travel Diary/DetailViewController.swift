@@ -58,5 +58,6 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         place.location = locationTextField.text!
         dvc.place = self.place
         
+        
     }
 }
