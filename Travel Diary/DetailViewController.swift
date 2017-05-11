@@ -50,11 +50,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             present(imagePicker, animated: true, completion: nil)
         }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dvc = segue.destination as! ViewController
-        dvc.data = "This came from the second VC"
-        
-      
     }
     
-}
+    
+    
+
