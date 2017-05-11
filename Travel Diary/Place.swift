@@ -9,7 +9,7 @@
 import UIKit
 //import RealmSwift
 
-class Place: UIViewController {
+class Place: NSObject {
 
     var location = String()
     var date = String()
@@ -18,14 +18,9 @@ class Place: UIViewController {
 
     convenience init(location: String, date: String, image: Data){
         self.init()
-
         self.location = location
         self.date = date
         self.image = image
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dvc = segue.destination as! ViewController
-        dvc.location = "This came from the second VC"
         
     }
     
