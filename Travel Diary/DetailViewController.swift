@@ -52,6 +52,9 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             present(imagePicker, animated: true, completion: nil)
         }
     
+    
+    
+    
     }
     
     
