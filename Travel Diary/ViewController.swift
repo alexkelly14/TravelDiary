@@ -75,11 +75,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
     }
     
-    
-
-    @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
-
-}
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! DetailViewController
         dvc.location = "This came from the first VC"
