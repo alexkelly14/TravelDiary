@@ -19,14 +19,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var place = Place()
     
     override func viewDidLoad() {
-        findLocation(location: String())
     }
-    func viewWillAppear() {
-        print(location)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Look here: \(location)")
     }
     
     func findLocation(location: String) {
-        
+        print("Looking for: \(location)")
         let localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = location
         let localSearch = MKLocalSearch(request: localSearchRequest)

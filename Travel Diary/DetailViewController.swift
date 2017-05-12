@@ -10,19 +10,19 @@ import UIKit
 import MapKit
 import CoreLocation
 class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate{
-        
-        @IBOutlet weak var imageView: UIImageView!
-        @IBOutlet weak var dateTextField: UITextField!
-        @IBOutlet weak var locationTextField: UITextField!
     
-        let imagePicker = UIImagePickerController()
-        var location = ""
-        var place = Place()
-        var recievedString = ""
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    
+    let imagePicker = UIImagePickerController()
+    var location = ""
+    var place = Place()
+    var recievedString = ""
     
     override func viewDidLoad() {
-            super.viewDidLoad()
-            imagePicker.delegate = self
+        super.viewDidLoad()
+        imagePicker.delegate = self
         
     }
     
@@ -31,26 +31,26 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-            imagePicker.dismiss(animated: true)
-            {
-                let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-                self.imageView.image = selectedImage
-            }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePicker.dismiss(animated: true)
+        {
+            let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.imageView.image = selectedImage
         }
-        
-        
-        @IBAction func onTappedCameraButton(_ sender: UIButton) {
-            if UIImagePickerController.isSourceTypeAvailable(.camera){
-                imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-                present(imagePicker, animated: true, completion: nil)
-            }
-        }
-        
-        @IBAction func onTappedLibraryButton(_ sender: UIButton) {
-            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+    }
+    
+    
+    @IBAction func onTappedCameraButton(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
             present(imagePicker, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func onTappedLibraryButton(_ sender: UIButton) {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     
     
