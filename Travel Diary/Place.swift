@@ -7,14 +7,14 @@
 //
 
 import UIKit
-//import RealmSwift
+import RealmSwift
 
 class Place: NSObject {
 
-    var location = String()
-    var date = String()
-    var image = Data()
-    var data = ""
+    dynamic var location = String()
+    dynamic var date = String()
+    dynamic var image = Data()
+    dynamic var data = ""
 
     convenience init(location: String, date: String, image: Data){
         self.init()
