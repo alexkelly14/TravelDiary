@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation 
-//import RealmSwift
+import RealmSwift
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
    
@@ -17,6 +17,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var location = ""
     var objects = [Any]()
     var place = Place()
+    let realm = try! Realm()
     
     override func viewDidLoad() {
     }
@@ -56,7 +57,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 self.displayPin(placemark: locations.first!.placemark)
             }
         }
-    
 }
 
     func displayPin(placemark : MKPlacemark) {

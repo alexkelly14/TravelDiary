@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import RealmSwift
 class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate{
     
     @IBOutlet weak var imageView: UIImageView!
@@ -19,6 +20,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     var location = ""
     var place = Place()
     var recievedString = ""
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
