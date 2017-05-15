@@ -41,28 +41,6 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         print(location)
     }
     
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        imagePicker.dismiss(animated: true)
-        {
-            let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-            self.imageView.image = selectedImage
-        }
-    }
-    
-    
-    @IBAction func onTappedCameraButton(_ sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-            present(imagePicker, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func onTappedLibraryButton(_ sender: UIButton) {
-        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        present(imagePicker, animated: true, completion: nil)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! ViewController
         dvc.location = locationTextField.text!

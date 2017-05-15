@@ -24,6 +24,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func viewWillAppear(_ animated: Bool) {
         print("Look here: \(location)")
+        
     }
     
     func findLocation(location: String) {
@@ -71,7 +72,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.setRegion(region, animated: true)
     }
 
-    @IBAction func unwindToIntialViewController(segue: UIStoryboardSegue){
+        @IBAction func unwindToIntialViewController(segue: UIStoryboardSegue){
         findLocation(location: location)
     }
     
