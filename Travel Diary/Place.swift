@@ -9,13 +9,16 @@
 import UIKit
 import RealmSwift
 
-class Place: NSObject {
+class Place: Object {
 
     dynamic var location = String()
     dynamic var date = String()
     dynamic var image = Data()
     dynamic var data = ""
 
+//    longitude = ??
+//    alitude = ??
+    
     convenience init(location: String, date: String, image: Data){
         self.init()
         self.location = location

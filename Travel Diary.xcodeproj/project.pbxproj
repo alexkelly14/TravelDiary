@@ -65,9 +65,9 @@
 		FC4665631E9BEC5B00E9F343 = {
 			isa = PBXGroup;
 			children = (
+				FC46656E1E9BEC5B00E9F343 /* Travel Diary */,
 				FCD8200F1EC61B0A00E1D75C /* RealmSwift.framework */,
 				FCD8200C1EC61B0700E1D75C /* Realm.framework */,
-				FC46656E1E9BEC5B00E9F343 /* Travel Diary */,
 				FC46656D1E9BEC5B00E9F343 /* Products */,
 			);
 			sourceTree = "<group>";

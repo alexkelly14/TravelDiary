@@ -16,11 +16,20 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     
+    let realm = try! Realm()
+    var detailItem: Place? {
+        didSet {
+            // Update the view.
+       //     self.configureView()
+        }
+    }
+
+    
+    
     let imagePicker = UIImagePickerController()
     var location = ""
     var place = Place()
     var recievedString = ""
-    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()

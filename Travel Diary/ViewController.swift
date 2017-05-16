@@ -16,15 +16,35 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var mapView: MKMapView!
     var location = ""
     var objects = [Any]()
-    var place = Place()
+//    var place = Place()
     let realm = try! Realm()
+    lazy var places: Results<Place> = {
+        self.realm.objects(Place.self)
+    }()
     
     override func viewDidLoad() {
     }
     
     override func viewWillAppear(_ animated: Bool) {
         print("Look here: \(location)")
+        
     }
+    
+    
+//    func loadLocations() {
+//        for place in places {
+//            let userLocationCoordinates = CLLocationCoordinate2DMake(place.latitude, place.longitude)
+//            let pinForUserLocation = findLocation(location: location)
+//            pinForUserLocation.coordinate = userLocationCoordinates
+//            pinForUserLocation.title = place.name
+//            pinForUserLocation.subtitle = place.placeDescription
+//            pinForUserLocation.place = place
+//            mapView.addAnnotation(location as! MKAnnotation)
+//            mapView.showAnnotations([location as! MKAnnotation], animated: true)
+//        }
+//    }
+    
+    
     
     func findLocation(location: String) {
         print("Looking for: \(location)")
