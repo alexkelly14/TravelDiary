@@ -18,10 +18,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var date = ""
     var objects = [Any]()
     var place = Place()
-    let realm = try! Realm()
-    lazy var places: Results<Place> = {
-        self.realm.objects(Place.self)
-    }()
+//    let realm = try! Realm()
+//    lazy var places: Results<Place> = {
+//        self.realm.objects(Place.self)
+//    }()
     
     override func viewDidLoad() {
     }
@@ -99,7 +99,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! DetailViewController
         dvc.location = "This came from the first VC"
-        
         
     }
 

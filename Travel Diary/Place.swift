@@ -13,17 +13,16 @@ class Place: Object {
 
     dynamic var location = String()
     dynamic var date = String()
-    dynamic var image = Data()
     dynamic var data = ""
 
 //    longitude = ??
 //    alitude = ??
     
-    convenience init(location: String, date: String, image: Data){
+    convenience init(location: String, date: String){
         self.init()
         self.location = location
         self.date = date
-        self.image = image
+ 
         
     }
     
