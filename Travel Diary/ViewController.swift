@@ -17,7 +17,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var location = ""
     var date = ""
     var objects = [Any]()
-//    var place = Place()
+    var place = Place()
     let realm = try! Realm()
     lazy var places: Results<Place> = {
         self.realm.objects(Place.self)

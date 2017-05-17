@@ -19,8 +19,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     let realm = try! Realm()
     var detailItem: Place? {
         didSet {
-            // Update the view.
-       //     self.configureView()
+        Update the view.
+         self.configureView()
         }
     }
 
@@ -46,7 +46,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         let dvc = segue.destination as! ViewController
         dvc.location = locationTextField.text!
         dvc.date = dateTextField.text!
-        dvc.places = 
+        dvc.place = place.self
     }
     
     
