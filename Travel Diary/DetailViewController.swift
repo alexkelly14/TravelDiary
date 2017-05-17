@@ -45,10 +45,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! ViewController
         dvc.location = locationTextField.text!
-        dvc.places = self.place
-        dvc.place = self.place
-        
-        
+        dvc.date = dateTextField.text!
+        dvc.places = 
     }
     
     
