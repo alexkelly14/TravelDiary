@@ -28,6 +28,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     let imagePicker = UIImagePickerController()
     var location = ""
+    var date = ""
     var place = Place()
     var recievedString = ""
     
@@ -44,6 +45,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! ViewController
         dvc.location = locationTextField.text!
+        dvc.date = dateTextField.text!
         dvc.place = self.place
         
         

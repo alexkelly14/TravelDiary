@@ -15,6 +15,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
    
     @IBOutlet weak var mapView: MKMapView!
     var location = ""
+    var date = ""
     var objects = [Any]()
     var place = Place()
     let realm = try! Realm()
