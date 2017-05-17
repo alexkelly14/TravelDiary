@@ -19,8 +19,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     let realm = try! Realm()
     var detailItem: Place? {
         didSet {
-        Update the view.
-         self.configureView()
+      //  Update the view.
+      //   self.configureView()
         }
     }
 
