@@ -28,6 +28,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     let imagePicker = UIImagePickerController()
     var location = ""
+    var date = ""
     var place = Place()
     var recievedString = ""
     
@@ -49,4 +50,12 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         
     }
-}
+    
+    
+    
+    
+    }
+    
+    
+    
+

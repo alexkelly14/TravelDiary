@@ -26,11 +26,6 @@ class Place: Object {
         self.image = image
         
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let dvc = segue.destination as! ViewController
-//        dvc.location = "This came from the second VC"
-//        
-//    }
-//    
     
 }
+

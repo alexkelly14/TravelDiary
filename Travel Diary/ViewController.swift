@@ -15,6 +15,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
    
     @IBOutlet weak var mapView: MKMapView!
     var location = ""
+    var date = ""
     var objects = [Any]()
 //    var place = Place()
     let realm = try! Realm()
@@ -91,15 +92,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.setRegion(region, animated: true)
     }
 
-        @IBAction func unwindToIntialViewController(segue: UIStoryboardSegue){
-        findLocation(location: location)
+    
+    @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
     }
     
-    
-
-    @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
-
-}
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! DetailViewController
         dvc.location = "This came from the first VC"
