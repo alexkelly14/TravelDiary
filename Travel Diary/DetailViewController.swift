@@ -46,7 +46,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         let dvc = segue.destination as! ViewController
         dvc.location = locationTextField.text!
         dvc.date = dateTextField.text!
-        dvc.place = self.place
+        dvc.place = Place.self
         
         
     }
