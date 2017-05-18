@@ -26,26 +26,18 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func viewDidLoad() {
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("Look here: \(location)")
+    @IBAction func unwindToInitialViewController (segue: UIStoryboardSegue) {
         
     }
     
-    
-//    func loadLocations() {
-//        for place in places {
-//            let userLocationCoordinates = CLLocationCoordinate2DMake(place.latitude, place.longitude)
-//            let pinForUserLocation = findLocation(location: location)
-//            pinForUserLocation.coordinate = userLocationCoordinates
-//            pinForUserLocation.title = place.name
-//            pinForUserLocation.subtitle = place.placeDescription
-//            pinForUserLocation.place = place
-//            mapView.addAnnotation(location as! MKAnnotation)
-//            mapView.showAnnotations([location as! MKAnnotation], animated: true)
-//        }
-//    }
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Look here: \(location)")
+        findLocation(location: location)
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        findLocation(location: location)
+    }
     
     func findLocation(location: String) {
         print("Looking for: \(location)")
@@ -88,10 +80,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let pin = MKPointAnnotation()
         pin.coordinate = center
         pin.title = placemark.name
+        pin.subtitle = date
         mapView.addAnnotation(pin)
         mapView.setRegion(region, animated: true)
     }
-
+    
     
     @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
     }
@@ -99,8 +92,5 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! DetailViewController
         dvc.location = "This came from the first VC"
-        
     }
-
-    
 }

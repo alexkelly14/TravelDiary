@@ -35,18 +35,16 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     func viewWillLoad() {
-        viewWillAppear(true)
         print(location)
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Save Button pressed")
         let dvc = segue.destination as! ViewController
         dvc.location = locationTextField.text!
         dvc.date = dateTextField.text!
         dvc.place = self.place
     }
 }
-    
-    
-    
+
+
 
