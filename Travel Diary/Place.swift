@@ -15,15 +15,10 @@ class Place: Object {
     dynamic var date = String()
     dynamic var data = ""
 
-//    longitude = ??
-//    alitude = ??
-    
     convenience init(location: String, date: String){
         self.init()
         self.location = location
         self.date = date
- 
-        
     }
     
 }

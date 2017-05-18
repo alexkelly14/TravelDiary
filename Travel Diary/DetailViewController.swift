@@ -9,21 +9,13 @@
 import UIKit
 import MapKit
 import CoreLocation
-import RealmSwift
+
+
 class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate{
     
-
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     
-//    let realm = try! Realm()
-//    var detailItem: Place? {
-//        didSet {
-//        Update the view.
-//         self.configureView()
-//        }
-//    }
-//    
     var location = ""
     var date = ""
     var place = Place()
@@ -31,20 +23,22 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
+    
     func viewWillLoad() {
         print(location)
+
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("Save Button pressed")
         let dvc = segue.destination as! ViewController
         dvc.location = locationTextField.text!
         dvc.date = dateTextField.text!
         dvc.place = self.place
+            }
     }
-}
+
 
 
 

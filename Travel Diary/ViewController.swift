@@ -1,27 +1,23 @@
-//
-//  ViewController.swift
-//  Travel Diary
-//
-//  Created by Alexandra Kelly  on 4/10/17.
-//  Copyright © 2017 Alexandra Kelly . All rights reserved.
-//
+ //
+ //  ViewController.swift
+ //  Travel Diary
+ //
+ //  Created by Alexandra Kelly  on 4/10/17.
+ //  Copyright © 2017 Alexandra Kelly . All rights reserved.
+ //
+ 
+ import UIKit
+ import MapKit
+ import CoreLocation
 
-import UIKit
-import MapKit
-import CoreLocation 
-import RealmSwift
-
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-   
+ 
+ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    
     @IBOutlet weak var mapView: MKMapView!
     var location = ""
     var date = ""
     var objects = [Any]()
     var place = Place()
-//    let realm = try! Realm()
-//    lazy var places: Results<Place> = {
-//        self.realm.objects(Place.self)
-//    }()
     
     override func viewDidLoad() {
     }
@@ -68,10 +64,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             else {
                 
                 self.displayPin(placemark: locations.first!.placemark)
+            
             }
+    
         }
-}
-
+    }
+    
     func displayPin(placemark : MKPlacemark) {
         self.navigationItem.title = placemark.name
         let center = placemark.location!.coordinate
@@ -93,4 +91,4 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let dvc = segue.destination as! DetailViewController
         dvc.location = "This came from the first VC"
     }
-}
+ }
