@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import RealmSwift
 
-class Place: Object {
+class Place: NSObject {
 
     dynamic var location = String()
     dynamic var date = String()
