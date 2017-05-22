@@ -73,16 +73,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travel background 1" translatesAutoresizingMaskIntoConstraints="NO" id="3gL-dR-mbo">
-                                <rect key="frame" x="0.0" y="64" width="375" height="981"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxF-wB-b6m">
-                                <rect key="frame" x="75" y="111" width="225" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxF-wB-b6m">
+                                <rect key="frame" x="75" y="110" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="k9T-L9-cDJ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m4Z-xN-3l3">
@@ -91,8 +91,8 @@
                                     <constraint firstAttribute="width" constant="225" id="D2D-Kg-o7S"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZa-UW-Dsa">
                                 <rect key="frame" x="108" y="289" width="159" height="89"/>
@@ -112,17 +112,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3gL-dR-mbo" firstAttribute="leading" secondItem="BGr-DT-qQ5" secondAttribute="leading" id="1ha-WN-ZqF"/>
+                            <constraint firstItem="3gL-dR-mbo" firstAttribute="leading" secondItem="BGr-DT-qQ5" secondAttribute="leading" id="2Yb-34-abU"/>
                             <constraint firstItem="3gL-dR-mbo" firstAttribute="top" secondItem="yFb-wt-PUn" secondAttribute="bottom" id="97d-Tu-u9f"/>
                             <constraint firstItem="WxF-wB-b6m" firstAttribute="leading" secondItem="BGr-DT-qQ5" secondAttribute="leadingMargin" constant="59" id="Ayt-Ex-vpN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m4Z-xN-3l3" secondAttribute="trailing" constant="59" id="KxV-wE-88L"/>
                             <constraint firstItem="WxF-wB-b6m" firstAttribute="top" secondItem="yFb-wt-PUn" secondAttribute="bottom" constant="47" id="LXj-15-ONU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nZa-UW-Dsa" secondAttribute="trailing" constant="92" id="OUx-YY-ar6"/>
+                            <constraint firstItem="3gL-dR-mbo" firstAttribute="top" secondItem="yFb-wt-PUn" secondAttribute="bottom" id="PVy-Vi-yfP"/>
                             <constraint firstItem="nZa-UW-Dsa" firstAttribute="leading" secondItem="BGr-DT-qQ5" secondAttribute="leadingMargin" constant="92" id="PWt-uo-QDM"/>
                             <constraint firstAttribute="trailing" secondItem="3gL-dR-mbo" secondAttribute="trailing" id="cIL-5r-FRP"/>
                             <constraint firstItem="m4Z-xN-3l3" firstAttribute="leading" secondItem="BGr-DT-qQ5" secondAttribute="leadingMargin" constant="59" id="haz-3W-ORa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WxF-wB-b6m" secondAttribute="trailing" constant="59" id="qVt-jS-b81"/>
                             <constraint firstItem="m4Z-xN-3l3" firstAttribute="top" secondItem="WxF-wB-b6m" secondAttribute="bottom" constant="33" id="rmI-eu-5cv"/>
                             <constraint firstItem="nZa-UW-Dsa" firstAttribute="top" secondItem="m4Z-xN-3l3" secondAttribute="bottom" constant="85" id="ssh-px-0Kz"/>
+                            <constraint firstAttribute="trailing" secondItem="3gL-dR-mbo" secondAttribute="trailing" id="t1I-Ks-eDD"/>
+                            <constraint firstItem="jIq-yu-5vw" firstAttribute="top" secondItem="3gL-dR-mbo" secondAttribute="bottom" id="znf-Sv-vmd"/>
                         </constraints>
                     </view>
                     <connections>

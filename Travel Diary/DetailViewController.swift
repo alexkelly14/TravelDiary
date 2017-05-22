@@ -12,14 +12,13 @@ import CoreLocation
 
 
 class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate{
-    
-    @IBOutlet weak var dateTextField: UITextField!
-    @IBOutlet weak var locationTextField: UITextField!
-    
     var location = ""
     var date = ""
     var place = Place()
     var recievedString = ""
+    
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +26,6 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func viewWillLoad() {
         print(location)
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,9 +34,5 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         dvc.location = locationTextField.text!
         dvc.date = dateTextField.text!
         dvc.place = self.place
-            }
     }
-
-
-
-
+}

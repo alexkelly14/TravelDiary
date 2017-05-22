@@ -9,31 +9,32 @@
  import UIKit
  import MapKit
  import CoreLocation
-
+ 
  
  class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-    
-    @IBOutlet weak var mapView: MKMapView!
     var location = ""
     var date = ""
     var objects = [Any]()
     var place = Place()
     
+    @IBOutlet weak var mapView: MKMapView!
+        
     override func viewDidLoad() {
     }
     
     @IBAction func unwindToInitialViewController (segue: UIStoryboardSegue) {
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         print("Look here: \(location)")
-        findLocation(location: location)
-        
+        if location != "" {
+            findLocation(location: location)
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
-        findLocation(location: location)
-    }
+        if location != "" {
+            findLocation(location: location)
+        }    }
     
     func findLocation(location: String) {
         print("Looking for: \(location)")
@@ -64,9 +65,7 @@
             else {
                 
                 self.displayPin(placemark: locations.first!.placemark)
-            
             }
-    
         }
     }
     
@@ -82,8 +81,7 @@
         mapView.addAnnotation(pin)
         mapView.setRegion(region, animated: true)
     }
-    
-    
+
     @IBAction func AddtoTravelDiaryButton(_ sender: UIButton) {
     }
     
